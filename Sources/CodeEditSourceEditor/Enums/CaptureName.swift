@@ -33,6 +33,16 @@ public enum CaptureName: Int8, CaseIterable, Sendable {
     case variableBuiltin
     case keywordReturn
     case keywordFunction
+    case keywordOperator
+    case functionCall
+    case functionMacro
+    case functionMethod
+    case operator_
+    case label
+    case punctuationDelimiter
+    case punctuationBracket
+    case stringRegex
+    case stringEscape
 
     var alternate: CaptureName {
         switch self {
@@ -47,6 +57,7 @@ public enum CaptureName: Int8, CaseIterable, Sendable {
     /// - Note: See ``CaptureName`` docs for why this enum isn't a raw representable.
     /// - Parameter string: A string to get the capture name from
     /// - Returns: A `CaptureNames` case
+    // swiftlint:disable:next function_body_length
     public static func fromString(_ string: String?) -> CaptureName? { // swiftlint:disable:this cyclomatic_complexity
         guard let string else { return nil }
         switch string {
@@ -92,6 +103,26 @@ public enum CaptureName: Int8, CaseIterable, Sendable {
             return .keywordReturn
         case "keyword.function":
             return .keywordFunction
+        case "keyword.operator":
+            return .keywordOperator
+        case "function.call":
+            return .functionCall
+        case "function.macro":
+            return .functionMacro
+        case "function.method":
+            return .functionMethod
+        case "operator":
+            return .operator_
+        case "label":
+            return .label
+        case "punctuation.delimiter":
+            return .punctuationDelimiter
+        case "punctuation.bracket":
+            return .punctuationBracket
+        case "string.regex":
+            return .stringRegex
+        case "string.escape":
+            return .stringEscape
         default:
             return nil
         }
@@ -142,6 +173,26 @@ public enum CaptureName: Int8, CaseIterable, Sendable {
             return "keywordReturn"
         case .keywordFunction:
             return "keywordFunction"
+        case .keywordOperator:
+            return "keywordOperator"
+        case .functionCall:
+            return "functionCall"
+        case .functionMacro:
+            return "functionMacro"
+        case .functionMethod:
+            return "functionMethod"
+        case .operator_:
+            return "operator"
+        case .label:
+            return "label"
+        case .punctuationDelimiter:
+            return "punctuationDelimiter"
+        case .punctuationBracket:
+            return "punctuationBracket"
+        case .stringRegex:
+            return "stringRegex"
+        case .stringEscape:
+            return "stringEscape"
         }
     }
 }

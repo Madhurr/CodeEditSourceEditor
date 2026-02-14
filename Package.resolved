@@ -3,10 +3,10 @@
     {
       "identity" : "codeeditlanguages",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/CodeEditApp/CodeEditLanguages.git",
+      "location" : "https://github.com/Madhurr/CodeEditLanguages.git",
       "state" : {
-        "revision" : "331d5dbc5fc8513be5848fce8a2a312908f36a11",
-        "version" : "0.1.20"
+        "branch" : "vaultbot-coloring",
+        "revision" : "72905ed3c901e2ff06e6fe8cb176c233b4cf52ff"
       }
     },
     {

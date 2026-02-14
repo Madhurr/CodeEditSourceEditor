@@ -19,10 +19,10 @@ let package = Package(
             url: "https://github.com/CodeEditApp/CodeEditTextView.git",
             from: "0.12.1"
         ),
-        // tree-sitter languages
+        // tree-sitter languages (VaultBot fork with improved Swift highlighting)
         .package(
-            url: "https://github.com/CodeEditApp/CodeEditLanguages.git",
-            exact: "0.1.20"
+            url: "https://github.com/Madhurr/CodeEditLanguages.git",
+            branch: "vaultbot-coloring"
         ),
         // CodeEditSymbols
         .package(
